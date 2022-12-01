@@ -1,0 +1,154 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Formio Example
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="restartQueue()">
+        <ion-icon name="refresh"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="ion-padding">
+    <formio [form]='{
+      "title": "My Test Form",
+      "components": [
+        {
+          "label": "Text Field",
+          "tableView": true,
+          "key": "textField",
+          "type": "textfield",
+          "input": true
+        },
+        {
+          "label": "Text Area",
+          "autoExpand": false,
+          "tableView": true,
+          "key": "textArea",
+          "type": "textarea",
+          "input": true
+        },
+        {
+          "label": "Number",
+          "mask": false,
+          "tableView": false,
+          "delimiter": false,
+          "requireDecimal": false,
+          "inputFormat": "plain",
+          "truncateMultipleSpaces": false,
+          "key": "number",
+          "type": "number",
+          "input": true
+        },
+        {
+          "label": "Password",
+          "tableView": false,
+          "key": "password",
+          "type": "password",
+          "input": true,
+          "protected": true
+        },
+        {
+          "label": "Checkbox",
+          "tableView": false,
+          "key": "checkbox",
+          "type": "checkbox",
+          "input": true
+        },
+        {
+          "label": "Select Boxes",
+          "optionsLabelPosition": "right",
+          "tableView": false,
+          "values": [
+            {
+              "label": "aa",
+              "value": "2",
+              "shortcut": ""
+            },
+            {
+              "label": "bb",
+              "value": "bb",
+              "shortcut": ""
+            }
+          ],
+          "key": "selectBoxes",
+          "type": "selectboxes",
+          "input": true,
+          "inputType": "checkbox",
+          "defaultValue": {
+            "2": false
+          }
+        },
+        {
+          "label": "Radio",
+          "optionsLabelPosition": "right",
+          "inline": false,
+          "tableView": false,
+          "values": [
+            {
+              "label": "qqqq",
+              "value": "qqqq",
+              "shortcut": ""
+            },
+            {
+              "label": "qư",
+              "value": "123qư",
+              "shortcut": ""
+            }
+          ],
+          "key": "radio",
+          "type": "radio",
+          "input": true
+        },
+        {
+          "label": "Email",
+          "tableView": true,
+          "key": "email",
+          "type": "email",
+          "input": true
+        },
+        {
+          "label": "Url",
+          "tableView": true,
+          "key": "url",
+          "type": "url",
+          "input": true
+        },
+        {
+          "label": "Phone Number",
+          "tableView": true,
+          "key": "phoneNumber",
+          "type": "phoneNumber",
+          "input": true
+        },
+        {
+          "label": "Tags",
+          "tableView": false,
+          "key": "tags",
+          "type": "tags",
+          "input": true
+        },
+        {
+          "label": "Submit",
+          "action": "event",
+          "showValidations": false,
+          "tableView": false,
+          "key": "submit1",
+          "type": "button",
+          "input": true,
+          "event": "z"
+        },
+        {
+          "input": true,
+          "label": "Submit",
+          "tableView": false,
+          "key": "submit",
+          "disableOnInvalid": true,
+          "type": "button"
+        }
+      ]
+    }'></formio>
+  </div>
+</ion-content>

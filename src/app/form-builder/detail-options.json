@@ -1,0 +1,7 @@
+{
+    "templates": {
+      "wizard": {
+        "form": "<div style='position: relative; width: 100%'><nav style='display: flex !important; justify-content: center !important'> <ul class='pagination' role='tablist'> {% ctx.panels.forEach(function(panel, index) { %} <li class='page-item{{ctx.currentPage === index ? ' active' : ''}}' style='cursor: pointer;'> <button tabindex='0' data-index='{{index}}' role='tab' class='page-link' ref='{{ctx.wizardKey}}-link'> {{ctx.t(panel.title, { _userInput: true })}} {% if (panel.tooltip && ctx.currentPage === index) { %} <i ref='{{ctx.wizardKey}}-tooltip' class='{{ctx.iconClass('question-sign')}} text-muted' data-tooltip='{{panel.tooltip}}'></i> {% } %} </button> </li> {% }) %} </ul> </nav><div class='wizard-page' ref='{{ctx.wizardKey}}'>{{ctx.components}}</div>{{ ctx.wizardNav }}</div>"
+      }
+    }
+  }
