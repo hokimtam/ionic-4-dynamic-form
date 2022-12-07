@@ -1,6 +1,6 @@
 {
   "name": "fomiojs-component-customized",
-  "version": "0.0.1",
+  "version": "0.0.102",
   "description": "Custom components for form.io",
   "main": "lib/index.js",
   "module": "node",
@@ -12,7 +12,7 @@
     "webpack:prod": "webpack --config webpack.prod.js",
     "webpack:use": "webpack --config webpack.use.js",
     "webpack": "npm run webpack:dev && npm run webpack:prod && npm run webpack:use",
-    "build": "tsc && gulp templates && npm run webpack && node-sass ./src/sass/contrib.scss ./dist/formio-contrib.css",
+    "build": "npm version patch && tsc && gulp templates && npm run webpack && node-sass ./src/sass/contrib.scss ./dist/formio-contrib.css",
     "lint": "tslint -p .",
     "prepublish": "npm run build"
   },
@@ -36,7 +36,6 @@
   "devDependencies": {
     "@types/chai": "^4.2.11",
     "@types/ejs": "^3.0.2",
-    "@types/mocha": "^7.0.2",
     "@types/node": "^13.13.1",
     "@types/sinon": "^9.0.0",
     "chai": "^4.2.0",

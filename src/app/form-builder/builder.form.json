@@ -1,0 +1,18 @@
+{
+  "display": "form",
+  "components": [
+    {
+      "label": "ZxZx",
+      "cloneRows": false,
+      "cellAlignment": "left",
+      "striped": false,
+      "bordered": false,
+      "hover": false,
+      "condensed": false,
+      "tableView": false,
+      "key": "zxZx",
+      "type": "multiplefield",
+      "input": true
+    }
+  ]
+}

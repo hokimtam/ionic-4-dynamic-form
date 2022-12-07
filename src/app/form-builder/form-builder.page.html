@@ -9,98 +9,34 @@
     <ion-grid>
       <ion-row>
         <ion-col>
-          <form-builder [form]="form" (change)="onChange($event)" [options]='{
-            "builder": {
-              "basic": false,
-              "advanced": false,
-              "data": false,
-              "customBasic": {
-                "title": "Basic Components",
-                "default": true,
-                "weight": 0,
-                "components": {
-                  "textfield": true,
-                  "textarea": true,
-                  "email": true,
-                  "phoneNumber": true
-                }
-              },
-              "custom": {
-                "title": "User Fields",
-                "weight": 10,
-                "components": {
-                  "firstName": {
-                    "title": "First Name",
-                    "key": "firstName",
-                    "icon": "terminal",
-                    "schema": {
-                      "label": "First Name",
-                      "type": "textfield",
-                      "key": "firstName",
-                      "input": true
-                    }
-                  },
-                  "lastName": {
-                    "title": "Last Name",
-                    "key": "lastName",
-                    "icon": "terminal",
-                    "schema": {
-                      "label": "Last Name",
-                      "type": "textfield",
-                      "key": "lastName",
-                      "input": true
-                    }
-                  },
-                  "email": {
-                    "title": "Email",
-                    "key": "email",
-                    "icon": "at",
-                    "schema": {
-                      "label": "Email",
-                      "type": "email",
-                      "key": "email",
-                      "input": true
-                    }
-                  },
-                  "phoneNumber": {
-                    "title": "Mobile Phone",
-                    "key": "mobilePhone",
-                    "icon": "phone-square",
-                    "schema": {
-                      "label": "Mobile Phone",
-                      "type": "phoneNumber",
-                      "key": "mobilePhone",
-                      "input": true
-                    }
-                  }
-                }
-              },
-              "layout": {
-                "components": {
-                  "table": false
-                }
-              }
-            },
-            "editForm": {
-              "textfield": [
-                {
-                  "key": "api",
-                  "ignore": true
-                }
-              ]
-            }
-          }'></form-builder>
+          <form-builder [form]="form" (change)="onChange($event)" [options]='options'></form-builder>
         </ion-col>
-        <ion-col size="auto">
+        
+      </ion-row>
+      <ion-row>
+        <ion-col>
           Form JSON
-          <div style="width: 350px">
+          <div style="width: 100%">
             <div class="well jsonviewer">
               <pre id="json"><code class="language-json" #json></code></pre>
-            </div></div>
+            </div>
+          </div>
         </ion-col>
       </ion-row>
     </ion-grid>
-
-   
   </div>
 </ion-content>
+
+
+
+<!-- <div class="card card-body bg-light">
+  <div id="builder"></div>
+</div>
+<h4>Rendered Form</h4>
+<div class="card card-body bg-light">
+  <div id="formio"></div>
+</div>
+<h4>Submission Data</h4>
+<div class="card card-body bg-light jsonviewer">
+  <pre id="json"></pre>
+</div> -->

@@ -77,7 +77,7 @@
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
  */
-
+ import '@webcomponents/custom-elements/custom-elements.min';
 (window as any).global = window;
 
 import 'zone.js/dist/zone';  // Included with Angular CLI.

@@ -52,7 +52,14 @@ var CheckMatrix = /** @class */ (function (_super) {
             });
             return tableClass;
         },
-        enumerable: true,
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(CheckMatrix.prototype, "emptyValue", {
+        get: function () {
+            return [];
+        },
+        enumerable: false,
         configurable: true
     });
     CheckMatrix.prototype.renderCell = function (row, col) {

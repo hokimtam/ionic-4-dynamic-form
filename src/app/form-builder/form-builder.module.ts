@@ -1,14 +1,18 @@
-import { ElementRef, NgModule, ViewChild } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
 
-import { IonicModule } from '@ionic/angular';
+import { IonicModule } from "@ionic/angular";
 
-import { FormBuilderPageRoutingModule } from './form-builder-routing.module';
+import { FormBuilderPageRoutingModule } from "./form-builder-routing.module";
 
-import { FormBuilderPage } from './form-builder.page';
-import { FormioModule } from 'angular-formio';
-// import { FormBuilder, Formio } from 'formiojs';
+import { FormBuilderPage } from "./form-builder.page";
+import { Formio, FormioModule } from "angular-formio";
+import { Formio as FJ} from "formiojs"
+import FormioContrib from "fomiojs-component-customized";
+
+Formio.use(FormioContrib);
+FJ.use(FormioContrib);
 
 @NgModule({
   imports: [
@@ -16,15 +20,8 @@ import { FormioModule } from 'angular-formio';
     FormsModule,
     IonicModule,
     FormBuilderPageRoutingModule,
-    FormioModule
-    
+    FormioModule,
   ],
-  declarations: [FormBuilderPage]
+  declarations: [FormBuilderPage],
 })
-export class FormBuilderPageModule {
-  @ViewChild('json',{read: true, static:true}) jsonElement?: ElementRef;
-
-  public form: Object = {
-    components: []
-  };
-}
+export class FormBuilderPageModule {}

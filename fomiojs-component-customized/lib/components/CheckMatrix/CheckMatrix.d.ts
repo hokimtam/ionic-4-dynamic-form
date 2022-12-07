@@ -22,6 +22,7 @@ export default class CheckMatrix extends CheckMatrix_base {
         schema: any;
     };
     get tableClass(): string;
+    get emptyValue(): any[];
     renderCell(row: any, col: any): any;
     render(children: any): any;
     /**

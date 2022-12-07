@@ -1,0 +1,25 @@
+<table class="{{ ctx.tableClass }}">
+  <thead>
+    <tr>
+      <th>{{ ctx.tableClass }}</th>
+      <th>
+
+        <button ref="addRowzzz" class="btn btn-secondary" type="button">
+          <i class="fa fa-times-circle-o"></i>
+        </button>
+      </th>
+    </tr>
+  </thead>
+  {{console.log(ctx)}}
+  <tbody>
+    {% for (let i = 0; i < ctx.instance.items.length; i++) { %} <tr>
+      <td>{{ ctx.renderCell(i, 0) }}</td>
+      <td>
+        <button ref='{{"removeRowzz-" +i}}'' class="btn btn-secondary" type="button">
+          <i class="fa fa-times-circle-o"></i>
+        </button>
+      </td>
+    </tr>
+    {% } %}
+  </tbody>
+</table>

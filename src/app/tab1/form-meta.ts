@@ -7,7 +7,7 @@ export const FORM_META = {
       "key": "panel",
       "type": "panel",
       "label": "Panel",
-      "collapsed": true,
+      "collapsed": false,
       "input": false,
       "tableView": false,
       "components": [
@@ -30,8 +30,8 @@ export const FORM_META = {
                 {
                   "label": "Wip Job Number",
                   "tableView": true,
-                  "key": "textField1",
-                  "type": "textfield",
+                  "key": "checkmatrix",
+                  "type": "checkmatrix",
                   "input": true
                 },
                 {
